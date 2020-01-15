@@ -19,13 +19,16 @@ const MainNavigation = props => {
 
   return (
     <React.Fragment>
-      {drawerIsOpen && <Backdrop onClick={closeDrawerHandler} />}(
+      {drawerIsOpen && <Backdrop onClick={closeDrawerHandler} />}
+
       <SideDrawer show={drawerIsOpen} onClick={closeDrawerHandler}>
         <nav className="main-navigation__drawer-nav">
           <NavLinks />
         </nav>
       </SideDrawer>
+
       <MainHeader>
+        {/*Button will be shown if window size < 768px*/}
         <button
           className="main-navigation__menu-btn"
           onClick={openDrawerHandler}
